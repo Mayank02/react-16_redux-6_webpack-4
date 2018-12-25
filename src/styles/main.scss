@@ -1,0 +1,42 @@
+@import "./page-not-found.scss";
+
+$fontSize: 50;
+@for $i from 10 through $fontSize {
+    .f-#{$i} {
+        font-size: #{$i}px;
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    .body-content {
+        background: white;
+        padding: 50px 0px;
+        position: relative;
+        min-height: 300px;
+        text-align: center;
+    }
+    .redux-container {
+        bottom: 0;
+        position: absolute;
+    }
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width: 320px) {
+        .content {
+            min-height: 650px;
+        }
+    }
+    /* Small Devices, Tablets, IPAD */
+    @media only screen and (min-width: 768px) {
+        .content {
+            min-height: 990px;
+        }
+    }
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width: 992px) {
+        .content {
+            min-height: 700px;
+        }
+    }
+}
